@@ -5,6 +5,7 @@ import Home from './components/Home.vue'
 import Welcome from './components/Welcome.vue'
 import Users from './components/user/Users.vue'
 import Rights from './components/power/Rights.vue'
+import Roles from './components/power/Roles.vue'
 // 导入字体图标
 import './assets/fonts/iconfont.css'
 // 导入全局样式表
@@ -23,7 +24,8 @@ const router = new VueRouter({
       children: [
         { path: '/welcome', component: Welcome },
         { path: '/users', component: Users },
-        { path: '/rights', component: Rights}
+        { path: '/rights', component: Rights},
+        { path: '/roles', component: Roles}
       ]
     },
   ]
