@@ -250,7 +250,6 @@ export default {
       }
       this.userlist = res.data.users
       this.total = res.data.total
-      console.log(res)
     },
     handleSizeChange(newSize) {
       this.queryInfo.pagesize = newSize
@@ -262,7 +261,6 @@ export default {
     },
     //   监听switch开关
     async userStateChanged(userinfo) {
-      console.log(userinfo)
       const { data: res } = await this.$http.put(
         `users/${userinfo.id}/state/${userinfo.mg_state}`
       )
@@ -283,7 +281,6 @@ export default {
     // 点击按钮，添加用户
     addUser() {
       this.$refs.addFormRef.validate(async (valid) => {
-        console.log(valid)
         if (!valid) return
         // 可以发起添加用户的网络请求
         const { data: res } = await this.$http.post('users', this.addForm)
@@ -337,7 +334,7 @@ export default {
     async removeUserById(id) {
       // 弹框询问用户是否删除用户数据
       const confirmResult = await this.$confirm(
-        '此操作将永久删除该文件, 是否继续?',
+        '此操作将永久删除该用户, 是否继续?',
         '提示',
         {
           confirmButtonText: '确定',

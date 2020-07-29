@@ -66,12 +66,12 @@ export default {
         103: 'iconfont icon-tijikongjian',
         101: 'iconfont icon-shangpin',
         102: 'iconfont icon-danju',
-        145: 'iconfont icon-baobiao'
+        145: 'iconfont icon-baobiao',
       },
       // 是否折叠
       isCollapse: false,
       // 被激活的链接地址
-      activePath: ''
+      activePath: '',
     }
   },
   created() {
@@ -88,7 +88,6 @@ export default {
       const { data: res } = await this.$http.get('menus')
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.menulist = res.data
-      console.log(res)
     },
     toogleCollapse() {
       this.isCollapse = !this.isCollapse
@@ -97,8 +96,8 @@ export default {
     saveNavState(activePath) {
       window.sessionStorage.setItem('activePath', activePath)
       this.activePath = activePath
-    }
-  }
+    },
+  },
 }
 </script>
 
