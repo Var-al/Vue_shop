@@ -208,7 +208,6 @@ export default {
       if (res.meta.status !== 200) {
         return this.$message.error('获取商品分类失败！')
       }
-      console.log(res.data)
       // 把数据列表赋值给catelist
       this.catelist = res.data.result
       //   为总数据条数赋值
@@ -238,7 +237,6 @@ export default {
       if (res.meta.status !== 200) {
         return this.$message.error('获取父级分类数据失败！')
       }
-      console.log(res.data)
       this.parentCateList = res.data
     },
     // 选择项发送变化触发这个函数
@@ -295,7 +293,6 @@ export default {
 
       this.editForm = res.data
       this.editDialogVisible = true
-      console.log(res.data)
     },
     // 监听修改分类的对话框的关闭事件
     editDialogClosed() {

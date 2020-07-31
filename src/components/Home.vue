@@ -3,8 +3,8 @@
     <!-- 头部区域 -->
     <el-header>
       <div>
-        <img src="../assets/heima.png" alt />
-        <span>电商后台管理系统</span>
+        <img src="../assets/gwc.png" alt />
+        <span>品优购后台管理系统</span>
       </div>
       <el-button type="info" @click="logiout">退出</el-button>
     </el-header>
@@ -118,6 +118,9 @@ export default {
     align-items: center;
     span {
       margin-left: 10px;
+    }
+    img {
+      width: 70px;
     }
   }
 }

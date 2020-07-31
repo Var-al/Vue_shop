@@ -306,7 +306,6 @@ export default {
         return this.$message.error('获取参数列表失败！')
       }
 
-      console.log(res.data)
       if (this.activeName === 'many') {
         this.manyTableData = res.data
       } else {
